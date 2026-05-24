@@ -1,22 +1,38 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  const pathname = usePathname();
+
+  const navLinks = [
+    {
+      name: "Browse Jobs",
+      path: "/jobs",
+    },
+    {
+      name: "Company",
+      path: "/company",
+    },
+    {
+      name: "Pricing",
+      path: "/pricing",
+    },
+  ];
+
   return (
     <nav className="w-full px-4 py-4 bg-[#0d0d0d]">
       <div className="max-w-7xl mx-auto">
         
-        {/* Navbar */}
         <div className="flex items-center justify-between bg-[#141414] border border-gray-800 rounded-2xl px-4 md:px-6 py-3">
 
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-linear-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
               ▶
             </div>
 
@@ -24,45 +40,48 @@ const Navbar = () => {
               <h1 className="text-white font-semibold leading-none">
                 Programming
               </h1>
-              <p className="text-gray-400 text-sm">Hero</p>
+
+              <p className="text-white font-semibold leading-none">
+                Hero
+              </p>
             </div>
-          </div>
+          </Link>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 text-gray-300">
-            <button className="hover:text-white transition">
-              Browse Jobs
-            </button>
 
-            <button className="hover:text-white transition">
-              Company
-            </button>
+            {navLinks.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={`pb-1 border-b-2 transition ${
+                  pathname === item.path
+                    ? "text-green-400 border-green-400"
+                    : "border-transparent hover:text-white"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
 
-            <button className="hover:text-white transition">
-              Pricing
-            </button>
-            
-            <button className="text-purple-400 font-medium hover:text-purple-300">
+            <Link
+              href="/signin"
+              className={`transition font-medium ${
+                pathname === "/signin"
+                  ? "text-green-400"
+                  : "text-purple-400 hover:text-purple-300"
+              }`}
+            >
               Sign In
-            </button>
+            </Link>
 
-            <button className="bg-white text-black px-5 py-2 rounded-xl font-medium hover:bg-gray-200 transition">
+            <Link
+              href="/get-started"
+              className="bg-white text-black px-5 py-2 rounded-xl font-medium hover:bg-gray-200 transition"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
 
-          {/* Right Side */}
-          {/* <div className="hidden md:flex items-center gap-4">
-            <button className="text-purple-400 font-medium hover:text-purple-300">
-              Sign In
-            </button>
-
-            <button className="bg-white text-black px-5 py-2 rounded-xl font-medium hover:bg-gray-200 transition">
-              Get Started
-            </button>
-          </div> */}
-
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden text-white"
@@ -71,29 +90,43 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {open && (
           <div className="md:hidden mt-3 bg-[#141414] border border-gray-800 rounded-2xl p-5 space-y-5 text-gray-300">
 
-            <button className="block hover:text-white">
-              Browse Jobs
-            </button>
+            {navLinks.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                onClick={() => setOpen(false)}
+                className={`block pb-1 border-b transition ${
+                  pathname === item.path
+                    ? "text-green-500 border-green-500"
+                    : "border-transparent hover:text-white"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
 
-            <button className="block hover:text-white">
-              Company
-            </button>
-
-            <button className="block hover:text-white">
-              Pricing
-            </button>
-
-            <button className="block text-purple-400 font-medium">
+            <Link
+              href="/signin"
+              onClick={() => setOpen(false)}
+              className={`block font-medium ${
+                pathname === "/signin"
+                  ? "text-green-500"
+                  : "text-purple-400"
+              }`}
+            >
               Sign In
-            </button>
+            </Link>
 
-            <button className="w-full bg-white text-black py-2 rounded-xl font-medium">
+            <Link
+              href="/get-started"
+              onClick={() => setOpen(false)}
+              className="block w-full text-center bg-white text-black py-2 rounded-xl font-medium"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
         )}
       </div>
