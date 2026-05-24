@@ -27,23 +27,20 @@ const Navbar = () => {
 
   return (
     <nav className="w-full px-4 py-4 bg-[#0d0d0d]">
-      <div className="max-w-7xl mx-auto">
+      <div className="lg:max-w-[80%] mx-auto">
         
         <div className="flex items-center justify-between bg-[#141414] border border-gray-800 rounded-2xl px-4 md:px-6 py-3">
 
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-linear-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
-              ▶
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-10 h-10 rounded-xl bg-linear-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl">
+              P
             </div>
 
             <div>
               <h1 className="text-white font-semibold leading-none">
-                Programming
+                Programming <br />Hero
               </h1>
 
-              <p className="text-white font-semibold leading-none">
-                Hero
-              </p>
             </div>
           </Link>
 
