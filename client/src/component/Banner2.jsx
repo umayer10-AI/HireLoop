@@ -24,7 +24,7 @@ const Banner2 = () => {
           {stats.map((stat, index) => (
             <div 
               key={index} 
-              className="bg-linear-to-b from-black shadow border shadow-pink-500 to-[#1a1a1a] text-white p-8 rounded-3xl flex flex-col items-start hover:scale-105 transition-transform duration-300"
+              className="bg-linear-to-b from-black shadow border shadow-pink-500 to-[#1a1a1a] backdrop-blur-md text-white p-8 rounded-3xl flex flex-col items-start hover:scale-105 transition-transform duration-300"
             >
               <div className="text-2xl mb-4 opacity-80">{stat.icon}</div>
               <h3 className="text-4xl font-bold mb-2">{stat.value}</h3>
