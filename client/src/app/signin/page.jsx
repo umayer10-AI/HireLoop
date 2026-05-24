@@ -1,9 +1,33 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 // import { Chrome } from "lucide-react";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 
 const SignInPage = () => {
+
+    const { register, handleSubmit, formState: { errors } } = useForm();
+
+    const a = async (v) => {
+        console.log(v)
+
+        const { data, error } = await authClient.signUp.email({
+            name: v.name,
+            email: v.email,
+            password: v.password,
+            image: v.image,
+            callbackURL: "/",
+        });
+
+        if(data){
+            alert("Data Successfully")
+        }
+        if(error){
+            alert(error.message)
+        }
+    }
+
   return (
     <div className="flex items-center justify-center bg-black px-4 py-5">
 
@@ -21,7 +45,7 @@ const SignInPage = () => {
         </div>
 
         {/* Form */}
-        <form className="space-y-5">
+        <form onSubmit={handleSubmit(a)} className="space-y-5">
 
           {/* Name */}
           <div>
@@ -32,6 +56,7 @@ const SignInPage = () => {
             <input
               type="text"
               placeholder="Enter your name"
+            {...register("name", { required: true })}
               className="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white outline-none focus:border-purple-500 transition"
             />
           </div>
@@ -44,6 +69,7 @@ const SignInPage = () => {
 
             <input
               type="email"
+              {...register("email", { required: true })}
               placeholder="Enter your email"
               className="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white outline-none focus:border-purple-500 transition"
             />
@@ -58,6 +84,7 @@ const SignInPage = () => {
             <input
               type="url"
               placeholder="Enter your url"
+              {...register("image", { required: true })}
               className="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white outline-none focus:border-purple-500 transition"
             />
           </div>
@@ -70,6 +97,7 @@ const SignInPage = () => {
 
             <input
               type="password"
+              {...register("password", { required: true })}
               placeholder="Enter your password"
               className="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white outline-none focus:border-purple-500 transition"
             />
@@ -78,14 +106,14 @@ const SignInPage = () => {
           {/* Sign In Button */}
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-3 rounded-xl font-semibold hover:opacity-90 transition"
+            className="w-full bg-linear-to-r from-purple-600 to-pink-500 text-white py-3 rounded-xl font-semibold hover:opacity-90 transition"
           >
             Sign In
           </button>
         </form>
 
         {/* Divider */}
-        <div className="flex items-center gap-3 my-6">
+        <div className="flex items-center gap-3 my-3">
           <div className="flex-1 h-[1px] bg-gray-700"></div>
 
           <span className="text-gray-400 text-sm">
