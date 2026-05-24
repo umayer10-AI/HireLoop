@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const SignInPage = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black px-4 py-10">
+    <div className="flex items-center justify-center bg-black px-4 py-5">
 
       <div className="w-full max-w-md bg-[#111111] border border-gray-800 rounded-3xl p-8 shadow-2xl">
 
@@ -55,8 +55,9 @@ const SignInPage = () => {
             </label>
 
             <input
-              type="file"
-              className="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-gray-400 file:mr-4 file:px-4 file:py-2 file:border-0 file:rounded-lg file:bg-purple-600 file:text-white hover:file:bg-purple-700"
+              type="url"
+              placeholder="Enter your url"
+              className="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white outline-none focus:border-purple-500 transition"
             />
           </div>
 
@@ -96,6 +97,7 @@ const SignInPage = () => {
         {/* Google Login */}
         <button className="w-full flex items-center justify-center gap-3 bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition">
           {/* <Chrome size={20} /> */}
+          <FcGoogle />
           Continue with Google
         </button>
 
