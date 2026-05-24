@@ -24,37 +24,42 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Links Columns */}
-        <div>
-          <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Product</h3>
-          <ul className="space-y-3">
-            <li><a href="#" className="hover:text-white">Job discovery</a></li>
-            <li><a href="#" className="hover:text-white">Worker AI</a></li>
-            <li><a href="#" className="hover:text-white">Companies</a></li>
-            <li><a href="#" className="hover:text-white">Salary data</a></li>
-          </ul>
+        <div className='flex justify-center'>
+            <div>
+            <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Product</h3>
+            <ul className="space-y-3">
+                <li><a href="#" className="hover:text-white">Job discovery</a></li>
+                <li><a href="#" className="hover:text-white">Worker AI</a></li>
+                <li><a href="#" className="hover:text-white">Companies</a></li>
+                <li><a href="#" className="hover:text-white">Salary data</a></li>
+            </ul>
+            </div>
         </div>
 
-        <div>
-          <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Navigations</h3>
-          <ul className="space-y-3">
-            <li><a href="#" className="hover:text-white">Help center</a></li>
-            <li><a href="#" className="hover:text-white">Career library</a></li>
-            <li><a href="#" className="hover:text-white">Contact</a></li>
-          </ul>
+        <div className='flex justify-center'>
+            <div>
+            <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Navigations</h3>
+            <ul className="space-y-3">
+                <li><a href="#" className="hover:text-white">Help center</a></li>
+                <li><a href="#" className="hover:text-white">Career library</a></li>
+                <li><a href="#" className="hover:text-white">Contact</a></li>
+            </ul>
+            </div>
         </div>
 
-        <div>
-          <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Resources</h3>
-          <ul className="space-y-3">
-            <li><a href="#" className="hover:text-white">Brand Guideline</a></li>
-            <li><a href="#" className="hover:text-white">Newsroom</a></li>
-          </ul>
+        <div className='flex justify-center'>
+            <div>
+            <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Resources</h3>
+            <ul className="space-y-3">
+                <li><a href="#" className="hover:text-white">Brand Guideline</a></li>
+                <li><a href="#" className="hover:text-white">Newsroom</a></li>
+            </ul>
+            </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between text-sm">
+      <div className="max-w-[90%] mx-auto mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between text-sm">
         <p>© Copyright 2024 — Programming Hero</p>
         <div className="flex gap-6 mt-4 md:mt-0">
           <a href="#" className="hover:text-white">Terms & Policy</a>
