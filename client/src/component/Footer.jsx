@@ -6,17 +6,17 @@ const Footer = () => {
             <footer className="bg-black text-gray-400 py-12 px-6 md:px-16">
       <div className="max-w-[90%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         
-        {/* Left Column: Logo & Description */}
+        
         <div className="col-span-1">
           <div className="flex items-center gap-2 mb-4 text-white font-bold text-xl">
-            {/* Replace with your Logo image if available */}
+            
             <div className="w-10 h-10 rounded-xl bg-linear-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl">H</div> 
             HireLoop
           </div>
           <p className="max-w-xs leading-relaxed">
             The AI-native career platform. Built for people who take their work seriously.
           </p>
-          {/* Social Icons Placeholder */}
+          
           <div className="flex gap-3 mt-6">
             <div className="w-10 h-10 bg-gray-800 rounded flex items-center justify-center cursor-pointer hover:bg-gray-700">f</div>
             <div className="w-10 h-10 bg-gray-800 rounded flex items-center justify-center cursor-pointer hover:bg-gray-700">P</div>
@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex justify-center'>
+        <div className='flex lg:justify-center'>
             <div>
             <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Product</h3>
             <ul className="space-y-3">
@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className='flex justify-center'>
+        <div className='flex lg:justify-center'>
             <div>
             <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Navigations</h3>
             <ul className="space-y-3">
@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className='flex justify-center'>
+        <div className='flex lg:justify-center'>
             <div>
             <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Resources</h3>
             <ul className="space-y-3">
