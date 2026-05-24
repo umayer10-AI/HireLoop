@@ -3,7 +3,7 @@ import React from 'react';
 const Banner1 = () => {
     return (
         <div>
-            <section className=" text-white py-20 px-4">
+            <section className=" text-white py-30 mb-100 px-4">
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
         
         {/* Badge */}

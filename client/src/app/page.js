@@ -5,7 +5,7 @@ import React from 'react';
 const page = () => {
   return (
     <div>
-      <div>
+      <div className="bg-[url('../../public/globe.png')] bg-cover bg-center bg-no-repeat">
         <Banner1></Banner1>
         <Banner2></Banner2>
       </div>
