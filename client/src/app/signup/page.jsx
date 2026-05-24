@@ -5,17 +5,18 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 
-const SignInPage = () => {
+const SignUpPage = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const a = async (v) => {
         console.log(v)
 
-        const { data, error } = await authClient.signIn.email({
+        const { data, error } = await authClient.signUp.email({
+            name: v.name,
             email: v.email,
             password: v.password,
-            rememberMe: true,
+            image: v.image,
             callbackURL: "/",
         });
 
@@ -43,9 +44,24 @@ const SignInPage = () => {
           </p>
         </div>
 
+        {/* Form */}
         <form onSubmit={handleSubmit(a)} className="space-y-5">
 
+          {/* Name */}
+          <div>
+            <label className="block text-sm text-gray-300 mb-2">
+              Name
+            </label>
 
+            <input
+              type="text"
+              placeholder="Enter your name"
+            {...register("name", { required: true })}
+              className="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white outline-none focus:border-purple-500 transition"
+            />
+          </div>
+
+          {/* Email */}
           <div>
             <label className="block text-sm text-gray-300 mb-2">
               Email
@@ -59,6 +75,21 @@ const SignInPage = () => {
             />
           </div>
 
+          {/* Image */}
+          <div>
+            <label className="block text-sm text-gray-300 mb-2">
+              Profile Image
+            </label>
+
+            <input
+              type="url"
+              placeholder="Enter your url"
+              {...register("image", { required: true })}
+              className="w-full bg-[#1a1a1a] border border-gray-700 rounded-xl px-4 py-3 text-white outline-none focus:border-purple-500 transition"
+            />
+          </div>
+
+          {/* Password */}
           <div>
             <label className="block text-sm text-gray-300 mb-2">
               Password
@@ -72,6 +103,7 @@ const SignInPage = () => {
             />
           </div>
 
+          {/* Sign In Button */}
           <button
             type="submit"
             className="w-full bg-linear-to-r from-purple-600 to-pink-500 text-white py-3 rounded-xl font-semibold hover:opacity-90 transition"
@@ -80,6 +112,7 @@ const SignInPage = () => {
           </button>
         </form>
 
+        {/* Divider */}
         <div className="flex items-center gap-3 my-3">
           <div className="flex-1 h-[1px] bg-gray-700"></div>
 
@@ -90,6 +123,7 @@ const SignInPage = () => {
           <div className="flex-1 h-[1px] bg-gray-700"></div>
         </div>
 
+        {/* Google Login */}
         <button className="w-full flex items-center justify-center gap-3 bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition">
           <FcGoogle size={20} />
           Continue with Google
@@ -99,10 +133,10 @@ const SignInPage = () => {
         <p className="text-center text-gray-400 text-sm mt-6">
           Don&apos;t have an account?{" "}
           <Link
-            href="/signup"
+            href="/signin"
             className="text-purple-400 font-semibold hover:text-purple-300"
           >
-            Sign Up
+            Sign In
           </Link>
         </p>
       </div>
@@ -110,4 +144,4 @@ const SignInPage = () => {
   );
 };
 
-export default SignInPage;
+export default SignUpPage;
