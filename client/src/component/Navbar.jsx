@@ -52,7 +52,7 @@ const Navbar = () => {
                 href={item.path}
                 className={`border-b-2 transition font-semibold ${
                   pathname === item.path
-                    ? "bg-linear-to-r from-purple-500 py-1 px-4 rounded-2xl to-pink-500 text-center text-white"
+                    ? "bg-linear-to-r from-purple-500 py-1 px-4 rounded-xl to-pink-500 text-center text-white"
                     : "border-transparent hover:text-white"
                 }`}
               >
@@ -65,7 +65,7 @@ const Navbar = () => {
               href="/signin"
               className={`transition font-medium ${
                 pathname === "/signin"
-                  ? "bg-linear-to-r from-purple-500 py-1 px-4 rounded-2xl to-pink-500 text-center text-white"
+                  ? "bg-linear-to-r from-purple-500 py-1 px-4 rounded-xl to-pink-500 text-center text-white"
                   : "text-purple-400 hover:text-purple-300"
               }`}
             >
