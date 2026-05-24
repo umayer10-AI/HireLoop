@@ -41,10 +41,7 @@ const Navbar = () => {
             <button className="hover:text-white transition">
               Pricing
             </button>
-          </div>
-
-          {/* Right Side */}
-          <div className="hidden md:flex items-center gap-4">
+            
             <button className="text-purple-400 font-medium hover:text-purple-300">
               Sign In
             </button>
@@ -53,6 +50,17 @@ const Navbar = () => {
               Get Started
             </button>
           </div>
+
+          {/* Right Side */}
+          {/* <div className="hidden md:flex items-center gap-4">
+            <button className="text-purple-400 font-medium hover:text-purple-300">
+              Sign In
+            </button>
+
+            <button className="bg-white text-black px-5 py-2 rounded-xl font-medium hover:bg-gray-200 transition">
+              Get Started
+            </button>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button
