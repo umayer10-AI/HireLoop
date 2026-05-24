@@ -1,5 +1,7 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
+import { Avatar, Button, Dropdown, Label } from "@heroui/react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -7,6 +9,10 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const { data: session } = authClient.useSession()
+  const user = session?.user
+  console.log(user)
 
   const pathname = usePathname();
 
@@ -60,25 +66,104 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <div className="flex items-center gap-8 border-l-2 pl-5 text-gray-300">
-                <Link
-              href="/signin"
-              className={`transition font-medium ${
-                pathname === "/signin"
-                  ? "bg-linear-to-r from-purple-500 py-1 px-4 rounded-xl to-pink-500 text-center text-white"
-                  : "text-purple-400 hover:text-purple-300"
-              }`}
-            >
-              Sign In
-            </Link>
 
-            <Link
+
+            <div className="flex items-center gap-8 border-l-2 pl-5">
+                {
+                  // user? <div className="flex items-center gap-3">
+                  //         <Avatar>
+                  //       <Avatar.Image alt="John Doe" src={user?.image} />
+                  //       <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                  //     </Avatar>
+                  //         <button onClick={async() => await authClient.signOut()} className="bg-linear-to-r from-blue-500 cursor-pointer hover:scale-95 transition duration-300 py-2 px-4 rounded-xl to-green-500 text-center text-white font-semibold">Log Out</button>
+                  //   </div>
+                  user? 
+                  <Dropdown triggerMode="hover">
+  
+  <Dropdown.Trigger>
+    <Avatar aria-label="Menu" className="cursor-pointer">
+      <Avatar.Image alt="John Doe" src={user?.image} />
+      <Avatar.Fallback>
+        {user?.name?.charAt(0)}
+      </Avatar.Fallback>
+    </Avatar>
+  </Dropdown.Trigger>
+
+  <Dropdown.Popover>
+    <Dropdown.Menu
+    >
+      <Dropdown.Item id="new-file">
+        <Label>Profile</Label>
+      </Dropdown.Item>
+
+      <Dropdown.Item onClick={async() => await authClient.signOut()}
+        id="delete-file"
+        variant="danger"
+      >
+        <Label onClick={async() => await authClient.signOut()}>Log Out</Label>
+      </Dropdown.Item>
+    </Dropdown.Menu>
+  </Dropdown.Popover>
+
+</Dropdown>
+                :
+                  // <div className="flex items-center gap-8">
+                    <Link
+                        href="/signin"
+                        className={`transition font-medium ${
+                          pathname === "/signin"
+                            ? "bg-linear-to-r from-purple-500 py-1 px-4 rounded-xl to-pink-500 text-center text-white"
+                            : "text-purple-400 hover:text-purple-300"
+                        }`}
+                      >
+                        Sign In
+                    </Link>
+                  // </div>
+                
+                }
+                
+                <Link
+                    href="/get-started"
+                    className="bg-white text-black px-5 py-2 rounded-xl font-medium hover:bg-gray-200 transition"
+                  >
+                    Get Started
+                </Link>
+              </div>
+
+            {/* <div className="flex items-center gap-8 border-l-2 pl-5">
+                {
+                  user? <div className="flex items-center gap-3">
+                          <Avatar>
+                        <Avatar.Image alt="John Doe" src={user?.image} />
+                        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                      </Avatar>
+                          <button onClick={async() => await authClient.signOut()} className="bg-linear-to-r from-blue-500 cursor-pointer hover:scale-95 transition duration-300 py-2 px-4 rounded-xl to-green-500 text-center text-white font-semibold">Log Out</button>
+                    </div>
+                :
+                  <div className="flex items-center gap-8">
+                    <Link
+                    href="/signin"
+                    className={`transition font-medium ${
+                      pathname === "/signin"
+                        ? "bg-linear-to-r from-purple-500 py-1 px-4 rounded-xl to-pink-500 text-center text-white"
+                        : "text-purple-400 hover:text-purple-300"
+                    }`}
+                  >
+                    Sign In
+                </Link>
+                <Link
               href="/get-started"
               className="bg-white text-black px-5 py-2 rounded-xl font-medium hover:bg-gray-200 transition"
             >
               Get Started
             </Link>
-            </div>
+                  </div>
+                
+                }
+                
+              </div> */}
+            
+            
           </div>
 
           <button
