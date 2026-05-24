@@ -37,8 +37,8 @@ const Navbar = () => {
             </div>
 
             <div>
-              <h1 className="text-white font-semibold leading-none">
-                Programming <br />Hero
+              <h1 className="text-2xl bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text font-bold leading-none">
+                HireLoop
               </h1>
 
             </div>
