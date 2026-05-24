@@ -1,6 +1,5 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-// import { Chrome } from "lucide-react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
@@ -33,7 +32,6 @@ const SignUpPage = () => {
 
       <div className="w-full max-w-md bg-[#111111] border border-gray-800 rounded-3xl p-8 shadow-2xl">
 
-        {/* Heading */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-white">
             Welcome Back
@@ -44,10 +42,8 @@ const SignUpPage = () => {
           </p>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit(a)} className="space-y-5">
 
-          {/* Name */}
           <div>
             <label className="block text-sm text-gray-300 mb-2">
               Name
@@ -61,7 +57,6 @@ const SignUpPage = () => {
             />
           </div>
 
-          {/* Email */}
           <div>
             <label className="block text-sm text-gray-300 mb-2">
               Email
@@ -75,7 +70,6 @@ const SignUpPage = () => {
             />
           </div>
 
-          {/* Image */}
           <div>
             <label className="block text-sm text-gray-300 mb-2">
               Profile Image
@@ -89,7 +83,6 @@ const SignUpPage = () => {
             />
           </div>
 
-          {/* Password */}
           <div>
             <label className="block text-sm text-gray-300 mb-2">
               Password
@@ -103,12 +96,11 @@ const SignUpPage = () => {
             />
           </div>
 
-          {/* Sign In Button */}
           <button
             type="submit"
             className="w-full bg-linear-to-r from-purple-600 to-pink-500 text-white py-3 rounded-xl font-semibold hover:opacity-90 transition"
           >
-            Sign In
+            Sign Up
           </button>
         </form>
 
@@ -131,7 +123,7 @@ const SignUpPage = () => {
 
         {/* Footer */}
         <p className="text-center text-gray-400 text-sm mt-6">
-          Don&apos;t have an account?{" "}
+          Already have an account?{" "}
           <Link
             href="/signin"
             className="text-purple-400 font-semibold hover:text-purple-300"
