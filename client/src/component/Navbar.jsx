@@ -53,9 +53,9 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`pb-1 border-b-2 transition ${
+                className={`border-b-2 transition font-semibold ${
                   pathname === item.path
-                    ? "text-green-400 border-green-400"
+                    ? "bg-linear-to-r from-purple-500 py-1 px-4 rounded-2xl to-pink-500 text-center text-white"
                     : "border-transparent hover:text-white"
                 }`}
               >
@@ -63,11 +63,12 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <Link
+            <div className="flex items-center gap-8 border-l-2 pl-5 text-gray-300">
+                <Link
               href="/signin"
               className={`transition font-medium ${
                 pathname === "/signin"
-                  ? "text-green-400"
+                  ? "bg-linear-to-r from-purple-500 py-1 px-4 rounded-2xl to-pink-500 text-center text-white"
                   : "text-purple-400 hover:text-purple-300"
               }`}
             >
@@ -80,6 +81,7 @@ const Navbar = () => {
             >
               Get Started
             </Link>
+            </div>
           </div>
 
           <button
@@ -98,9 +100,9 @@ const Navbar = () => {
                 key={item.path}
                 href={item.path}
                 onClick={() => setOpen(false)}
-                className={`block pb-1 border-b transition ${
+                className={`block border-b transition ${
                   pathname === item.path
-                    ? "text-green-500 border-green-500"
+                    ? "bg-linear-to-r from-purple-500 py-2 rounded-2xl to-pink-500 text-center text-white"
                     : "border-transparent hover:text-white"
                 }`}
               >
@@ -113,7 +115,7 @@ const Navbar = () => {
               onClick={() => setOpen(false)}
               className={`block font-medium ${
                 pathname === "/signin"
-                  ? "text-green-500"
+                  ? "bg-linear-to-r from-purple-500 py-2 rounded-2xl to-pink-500 text-center text-white"
                   : "text-purple-400"
               }`}
             >
