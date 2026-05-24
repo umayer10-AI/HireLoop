@@ -1,6 +1,7 @@
 "use client";
 // import { Chrome } from "lucide-react";
 import Link from "next/link";
+import { FcGoogle } from "react-icons/fc";
 
 const SignInPage = () => {
   return (
@@ -96,8 +97,7 @@ const SignInPage = () => {
 
         {/* Google Login */}
         <button className="w-full flex items-center justify-center gap-3 bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition">
-          {/* <Chrome size={20} /> */}
-          <FcGoogle />
+          <FcGoogle size={20} />
           Continue with Google
         </button>
 
