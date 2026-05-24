@@ -4,14 +4,14 @@ const Footer = () => {
     return (
         <div>
             <footer className="bg-black text-gray-400 py-12 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-[90%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         
         {/* Left Column: Logo & Description */}
         <div className="col-span-1">
           <div className="flex items-center gap-2 mb-4 text-white font-bold text-xl">
             {/* Replace with your Logo image if available */}
-            <div className="w-8 h-8 bg-purple-600 rounded"></div> 
-            Programming Hero
+            <div className="w-10 h-10 rounded-xl bg-linear-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl">H</div> 
+            HireLoop
           </div>
           <p className="max-w-xs leading-relaxed">
             The AI-native career platform. Built for people who take their work seriously.
@@ -26,7 +26,7 @@ const Footer = () => {
 
         {/* Links Columns */}
         <div>
-          <h3 className="text-indigo-500 font-semibold mb-4">Product</h3>
+          <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Product</h3>
           <ul className="space-y-3">
             <li><a href="#" className="hover:text-white">Job discovery</a></li>
             <li><a href="#" className="hover:text-white">Worker AI</a></li>
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-indigo-500 font-semibold mb-4">Navigations</h3>
+          <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Navigations</h3>
           <ul className="space-y-3">
             <li><a href="#" className="hover:text-white">Help center</a></li>
             <li><a href="#" className="hover:text-white">Career library</a></li>
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-indigo-500 font-semibold mb-4">Resources</h3>
+          <h3 className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit font-bold mb-4">Resources</h3>
           <ul className="space-y-3">
             <li><a href="#" className="hover:text-white">Brand Guideline</a></li>
             <li><a href="#" className="hover:text-white">Newsroom</a></li>
