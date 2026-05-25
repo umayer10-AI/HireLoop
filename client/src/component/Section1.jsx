@@ -85,7 +85,7 @@ const Section1 = () => {
 
             <button
               href="#"
-              className="text-white bg-slate-800 font-medium flex py-2 px-4 group-hover:bg-white items-center group-hover:text-black rounded-xl transition"
+              className="text-white bg-slate-950 border border-gray-700 font-medium flex py-2 px-4 group-hover:bg-white items-center group-hover:text-black rounded-xl transition"
             >
               Apply Now →
             </button>

@@ -3,6 +3,7 @@ import Banner2 from '@/component/Banner2';
 import Section1 from '@/component/Section1';
 import Section2 from '@/component/Section2';
 import Section3 from '@/component/Section3';
+import Section4 from '@/component/Section4';
 import React from 'react';
 
 const page = () => {
@@ -15,6 +16,7 @@ const page = () => {
       </div>
       <Section2></Section2>
       <Section3></Section3>
+      <Section4></Section4>
     </div>
   );
 };
