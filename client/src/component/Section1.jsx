@@ -63,11 +63,11 @@ const Section1 = () => {
         {jobs.map((job, index) => (
           <div
             key={index}
-            className="bg-[#151516] p-8 rounded-2xl border border-gray-800"
+            className="bg-[#151516] group hover:-translate-y-2 hover:bg-linear-to-r hover:from-purple-500 hover:to-pink-500 transition duration-500 p-8 hover:text-black rounded-2xl border border-gray-800"
           >
-            <h3 className="text-2xl font-semibold mb-3">{job.title}</h3>
+            <h3 className="text-2xl group-hover:font-bold font-semibold mb-3">{job.title}</h3>
 
-            <p className="text-gray-400 mb-6 text-sm">{job.desc}</p>
+            <p className="text-gray-400 group-hover:text-gray-800 group-hover:font-semibold mb-6 text-sm">{job.desc}</p>
 
             <div className="flex flex-wrap gap-3 mb-6">
               <span className="bg-black text-gray-300 px-4 py-2 rounded-full text-xs flex items-center gap-2 border border-gray-700">
@@ -83,12 +83,12 @@ const Section1 = () => {
               </span>
             </div>
 
-            <a
+            <button
               href="#"
-              className="text-white font-medium flex items-center hover:text-blue-400 transition"
+              className="text-white font-medium flex py-2 px-4 group-hover:bg-white items-center group-hover:text-black rounded-xl transition"
             >
               Apply Now →
-            </a>
+            </button>
           </div>
         ))}
       </div>
