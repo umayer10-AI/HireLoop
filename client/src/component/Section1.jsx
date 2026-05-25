@@ -47,13 +47,13 @@ const jobs = [
 
 const Section1 = () => {
   return (
-    <div className="bg-black text-white py-16 px-6">
+    <div className="bg-black text-white pt-16 pb-25 px-6">
       <div className="text-center mb-12">
         <p className="bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text w-fit mx-auto font-bold tracking-widest text-sm mb-4 uppercase">
           ■ SMART JOB DISCOVERY ■
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-bold">
+        <h2 className="text-3xl md:text-4xl font-bold">
           The roles you did never <br /> find by searching
         </h2>
       </div>
