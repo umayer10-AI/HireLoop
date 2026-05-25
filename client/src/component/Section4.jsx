@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Section4 = () => {
@@ -28,9 +29,9 @@ const Section4 = () => {
     </p>
     
     <div className="flex flex-col sm:flex-row justify-center gap-4">
-      <button className="bg-white text-black font-semibold px-8 py-3 rounded-lg hover:bg-gray-200 transition">
+      <Link href={'/signup'} className="bg-white text-black font-semibold px-8 py-3 rounded-lg hover:bg-gray-200 transition">
         Create a free account
-      </button>
+      </Link>
       <button className="bg-transparent border border-gray-700 text-white font-semibold px-8 py-3 rounded-lg hover:bg-gray-900 transition">
         View pricing
       </button>

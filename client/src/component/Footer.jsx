@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 const Footer = () => {
     return (
         <div>
-            <footer className="bg-black text-gray-400 py-12 px-6 md:px-16">
+            <footer className="bg-black text-gray-400 pt-20 py-12 px-6 md:px-16">
       <div className="max-w-[90%] mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
         
         
