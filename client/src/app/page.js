@@ -1,6 +1,7 @@
 import Banner1 from '@/component/Banner1';
 import Banner2 from '@/component/Banner2';
 import Section1 from '@/component/Section1';
+import Section2 from '@/component/Section2';
 import React from 'react';
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
         <Banner2></Banner2>
         <Section1></Section1>
       </div>
+      <Section2></Section2>
     </div>
   );
 };

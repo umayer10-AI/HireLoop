@@ -27,6 +27,12 @@ const SignUpPage = () => {
         }
     }
 
+    const handleGoogle = async () => {
+        const data = await authClient.signIn.social({
+          provider: "google",
+        });
+    }
+
   return (
     <div className="flex items-center justify-center bg-black px-4 py-5">
 
@@ -104,7 +110,6 @@ const SignUpPage = () => {
           </button>
         </form>
 
-        {/* Divider */}
         <div className="flex items-center gap-3 my-3">
           <div className="flex-1 h-[1px] bg-gray-700"></div>
 
@@ -115,13 +120,11 @@ const SignUpPage = () => {
           <div className="flex-1 h-[1px] bg-gray-700"></div>
         </div>
 
-        {/* Google Login */}
-        <button className="w-full flex items-center justify-center gap-3 bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition">
+        <button onClick={handleGoogle} className="w-full flex items-center justify-center gap-3 bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition">
           <FcGoogle size={20} />
           Continue with Google
         </button>
 
-        {/* Footer */}
         <p className="text-center text-gray-400 text-sm mt-6">
           Already have an account?{" "}
           <Link
