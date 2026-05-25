@@ -1,4 +1,6 @@
+"use client"
 import React from 'react';
+import { motion } from "motion/react";
 
 const Footer = () => {
     return (
@@ -10,7 +12,20 @@ const Footer = () => {
         <div className="col-span-1">
           <div className="flex items-center gap-2 mb-4 text-white font-bold text-xl">
             
-            <div className="w-10 h-10 rounded-xl bg-linear-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl">H</div> 
+            <motion.div
+                animate={{
+                  rotate: 360,
+                }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  repeatDelay: 3,
+                  ease: "easeInOut",
+                }}
+                className="w-10 h-10 font-bold rounded-xl bg-linear-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl"
+              >
+                H
+            </motion.div> 
             HireLoop
           </div>
           <p className="max-w-xs leading-relaxed">

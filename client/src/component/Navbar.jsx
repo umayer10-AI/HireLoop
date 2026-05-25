@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "motion/react";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Button, Dropdown, Label } from "@heroui/react";
 import { Menu, X } from "lucide-react";
@@ -38,14 +38,25 @@ const Navbar = () => {
         <div className="flex items-center justify-between bg-[#141414] border border-gray-800 rounded-2xl px-4 md:px-6 py-3">
 
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 font-bold rounded-xl bg-linear-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl">
-              H
-            </div>
+
+            <motion.div
+                animate={{
+                  rotate: 360,
+                }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  repeatDelay: 3,
+                  ease: "easeInOut",
+                }}
+                className="w-10 h-10 font-bold rounded-xl bg-linear-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl"
+              >
+                H
+            </motion.div>
 
             <div>
-              <h1 className="text-2xl bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text font-bold leading-none">
-                HireLoop
-              </h1>
+
+              <h2 className="text-2xl bg-linear-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text font-bold leading-none">HireLoop</h2>
 
             </div>
           </Link>
