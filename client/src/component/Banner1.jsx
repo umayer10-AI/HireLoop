@@ -3,15 +3,13 @@ import React from 'react';
 const Banner1 = () => {
     return (
         <div>
-            <section className=" text-white py-30 mb-100 px-4">
+            <section className=" text-white py-30 lg:mb-100 px-4">
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
         
-        {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-[#1a1a1a] border border-gray-700 px-4 py-1.5 rounded-full text-sm text-gray-300 mb-6">
           <span>💼</span> 50,000+ NEW JOBS THIS MONTH
         </div>
 
-        {/* Heading */}
         <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
           Find Your Dream Job Today
         </h1>
@@ -19,7 +17,6 @@ const Banner1 = () => {
           HireLoop connects top talent with world-class companies. Browse thousands of curated opportunities and land your next role — faster.
         </p>
 
-        {/* Search Bar */}
         <div className="w-full bg-[#121212] p-2 rounded-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-2 shadow-2xl">
           <input 
             type="text" 
@@ -37,7 +34,6 @@ const Banner1 = () => {
           </button>
         </div>
 
-        {/* Trending Tags */}
         <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm text-gray-400">
           <span>Trending Position:</span>
           {['Product Designer', 'AI Engineering', 'Dev-ops Engineer'].map((tag) => (

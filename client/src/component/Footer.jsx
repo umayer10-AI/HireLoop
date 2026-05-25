@@ -73,7 +73,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="max-w-[90%] mx-auto mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between text-sm">
         <p>© Copyright 2024 — Programming Hero</p>
         <div className="flex gap-6 mt-4 md:mt-0">

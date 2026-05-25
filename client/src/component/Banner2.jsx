@@ -11,15 +11,13 @@ const Banner2 = () => {
 
     return (
         <div>
-            <section className="py-16 px-4 mt-40 pb-20"> {/* ব্যাকগ্রাউন্ড সাদা রাখা হয়েছে */}
+            <section className="py-16 px-4 lg:mt-40 pb-20">
       <div className="max-w-6xl mx-auto text-center">
         
-        {/* Title */}
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-300 mb-12">
           Assisting over <span className='text-white'>15,000 job seekers</span> <br /> find their dream positions.
         </h2>
 
-        {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <div 
