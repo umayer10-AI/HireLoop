@@ -1,4 +1,5 @@
 import React from "react";
+import Marquee from "react-fast-marquee";
 
 const features = [
   {
@@ -58,11 +59,14 @@ const Section2 = () => {
         </h2>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {features.map((feature, index) => (
+        
+        <div className="max-w-[80%] mx-auto">
+            <Marquee>
+      <div className="flex items-center">
+            {features.map((feature, index) => (
           <div
             key={index}
-            className="flex items-center gap-4 floating-card"
+            className="flex items-center gap-4 mr-10 border border-gray-500 p-4 rounded-2xl bg-[#151516] floating-card"
             style={{
               animationDelay: `${index * 0.2}s`,
             }}
@@ -85,6 +89,9 @@ const Section2 = () => {
           </div>
         ))}
       </div>
+        </Marquee>
+        </div>
+
     </div>
   );
 };
