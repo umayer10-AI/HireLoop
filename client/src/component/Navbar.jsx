@@ -72,10 +72,12 @@ const Navbar = () => {
                 {
 
                   user? 
-                  <Dropdown triggerMode="hover">
+                  <div className="flex items-center gap-5">
+                    <h2>Hi, {user?.name?.split(" ")[0]}</h2>
+                    <Dropdown triggerMode="hover">
   
                 <Dropdown.Trigger>
-                  <Avatar aria-label="Menu" className="cursor-pointer">
+                  <Avatar size="sm" aria-label="Menu" className="cursor-pointer">
                     <Avatar.Image alt="John Doe" src={user?.image} />
                     <Avatar.Fallback>
                       {user?.name?.charAt(0)}
@@ -100,6 +102,7 @@ const Navbar = () => {
                 </Dropdown.Popover>
 
               </Dropdown>
+                    </div>
                 :
                     <Link
                         href="/signin"
