@@ -27,6 +27,12 @@ const SignInPage = () => {
         }
     }
 
+    const handleGoogle = async () => {
+        const data = await authClient.signIn.social({
+          provider: "google",
+        });
+    }
+
   return (
     <div className="flex items-center justify-center bg-black px-4 py-5">
 
@@ -90,7 +96,7 @@ const SignInPage = () => {
           <div className="flex-1 h-[1px] bg-gray-700"></div>
         </div>
 
-        <button className="w-full flex items-center justify-center gap-3 bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition">
+        <button onClick={handleGoogle} className="w-full flex items-center justify-center gap-3 bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition">
           <FcGoogle size={20} />
           Continue with Google
         </button>

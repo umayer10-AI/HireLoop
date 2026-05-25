@@ -70,44 +70,37 @@ const Navbar = () => {
 
             <div className="flex items-center gap-8 border-l-2 pl-5">
                 {
-                  // user? <div className="flex items-center gap-3">
-                  //         <Avatar>
-                  //       <Avatar.Image alt="John Doe" src={user?.image} />
-                  //       <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
-                  //     </Avatar>
-                  //         <button onClick={async() => await authClient.signOut()} className="bg-linear-to-r from-blue-500 cursor-pointer hover:scale-95 transition duration-300 py-2 px-4 rounded-xl to-green-500 text-center text-white font-semibold">Log Out</button>
-                  //   </div>
+
                   user? 
                   <Dropdown triggerMode="hover">
   
-  <Dropdown.Trigger>
-    <Avatar aria-label="Menu" className="cursor-pointer">
-      <Avatar.Image alt="John Doe" src={user?.image} />
-      <Avatar.Fallback>
-        {user?.name?.charAt(0)}
-      </Avatar.Fallback>
-    </Avatar>
-  </Dropdown.Trigger>
+                <Dropdown.Trigger>
+                  <Avatar aria-label="Menu" className="cursor-pointer">
+                    <Avatar.Image alt="John Doe" src={user?.image} />
+                    <Avatar.Fallback>
+                      {user?.name?.charAt(0)}
+                    </Avatar.Fallback>
+                  </Avatar>
+                </Dropdown.Trigger>
 
-  <Dropdown.Popover>
-    <Dropdown.Menu
-    >
-      <Dropdown.Item id="new-file">
-        <Label>Profile</Label>
-      </Dropdown.Item>
+                <Dropdown.Popover>
+                  <Dropdown.Menu
+                  >
+                    <Dropdown.Item id="new-file">
+                      <Label>Profile</Label>
+                    </Dropdown.Item>
 
-      <Dropdown.Item onClick={async() => await authClient.signOut()}
-        id="delete-file"
-        variant="danger"
-      >
-        <Label onClick={async() => await authClient.signOut()}>Log Out</Label>
-      </Dropdown.Item>
-    </Dropdown.Menu>
-  </Dropdown.Popover>
+                    <Dropdown.Item onClick={async() => await authClient.signOut()}
+                      id="delete-file"
+                      variant="danger"
+                    >
+                      <Label onClick={async() => await authClient.signOut()}>Log Out</Label>
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown.Popover>
 
-</Dropdown>
+              </Dropdown>
                 :
-                  // <div className="flex items-center gap-8">
                     <Link
                         href="/signin"
                         className={`transition font-medium ${
@@ -118,7 +111,6 @@ const Navbar = () => {
                       >
                         Sign In
                     </Link>
-                  // </div>
                 
                 }
                 
