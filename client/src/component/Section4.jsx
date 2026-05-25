@@ -3,8 +3,11 @@ import React from 'react';
 const Section4 = () => {
     return (
         <div>
-            <div className="relative bg-black text-white py-24 px-6 overflow-hidden">
-  <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+            <div className="relative text-white py-40 px-6 overflow-hidden bg-cover bg-center"
+                style={{
+                backgroundImage: "url('/bg.png')",
+            }}>
+  <div className="absolute top-0 left-0 w-full h-full bg-linear-to-b from-purple-700/50 to-black/50 overflow-hidden z-0">
     <div className="absolute -top-[50%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] rounded-[100%] bg-blue-900/20 blur-[120px]"></div>
     <div
   className="absolute inset-0 opacity-20"

@@ -32,7 +32,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full px-4 py-4 lg:sticky lg:top-0">
+    <nav className="w-full px-4 py-4 lg:sticky lg:top-0 lg:z-50">
       <div className="lg:max-w-[80%] mx-auto">
         
         <div className="flex items-center justify-between backdrop-blur-md bg-[#181818]/60 border border-gray-800 rounded-2xl px-4 md:px-6 py-3">
