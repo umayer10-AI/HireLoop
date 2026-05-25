@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const jobs = [
@@ -93,9 +94,9 @@ const Section1 = () => {
       </div>
 
       <div className="text-center mt-12">
-        <button className="bg-white text-black font-semibold px-8 py-3 rounded-full hover:bg-gray-200 transition">
+        <Link href={'/jobs'} className="bg-white text-black font-semibold px-8 py-3 rounded-full hover:bg-gray-200 transition">
           View all job open
-        </button>
+        </Link>
       </div>
     </div>
   );
