@@ -32,10 +32,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full px-4 py-4 bg-[#0d0d0d]">
+    <nav className="w-full px-4 py-4 lg:sticky lg:top-0">
       <div className="lg:max-w-[80%] mx-auto">
         
-        <div className="flex items-center justify-between bg-[#141414] border border-gray-800 rounded-2xl px-4 md:px-6 py-3">
+        <div className="flex items-center justify-between backdrop-blur-md bg-[#181818]/60 border border-gray-800 rounded-2xl px-4 md:px-6 py-3">
 
           <Link href="/" className="flex items-center gap-2">
 
@@ -79,7 +79,7 @@ const Navbar = () => {
 
 
 
-            <div className="flex items-center gap-8 border-l-2 pl-5">
+            <div className="flex items-center gap-8 border-l-2 border-l-gray-700 pl-7">
                 {
 
                   user? 
