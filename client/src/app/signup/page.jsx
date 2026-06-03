@@ -20,10 +20,25 @@ const SignUpPage = () => {
         });
 
         if(data){
-            alert("Data Successfully")
+            toast('Data Successfully',{
+                icon: '✅',
+                style: {
+                  borderRadius: '10px',
+                  background: '#333',
+                  color: '#fff',
+                },
+              }
+            );
         }
         if(error){
-            alert(error.message)
+            toast.error( `${error.message}`,{
+                style: {
+                  borderRadius: '10px',
+                  background: '#333',
+                  color: '#fff',
+                },
+              }
+            );
         }
     }
 

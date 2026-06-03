@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
 import SmoothScrolling from "@/component/SmoothScrolling";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <SmoothScrolling>
           <main>{children}</main>
         </SmoothScrolling>
+        <Toaster></Toaster>
         <Footer></Footer>
       </body>
     </html>

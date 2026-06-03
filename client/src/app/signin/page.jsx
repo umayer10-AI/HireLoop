@@ -3,6 +3,7 @@ import { authClient } from "@/lib/auth-client";
 // import { Chrome } from "lucide-react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 
 const SignInPage = () => {
@@ -20,10 +21,25 @@ const SignInPage = () => {
         });
 
         if(data){
-            alert("Data Successfully")
+            toast('Data Successfully',{
+                icon: '✅',
+                style: {
+                  borderRadius: '10px',
+                  background: '#333',
+                  color: '#fff',
+                },
+              }
+            );
         }
         if(error){
-            alert(error.message)
+            toast.error( `${error.message}`,{
+                style: {
+                  borderRadius: '10px',
+                  background: '#333',
+                  color: '#fff',
+                },
+              }
+            );
         }
     }
 
